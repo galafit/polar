@@ -39,6 +39,9 @@ public class GraphPainter {
                 if(graphType == GraphType.VERTICAL_LINE) {
                     drawVerticalLine(g, x, y, vLine);
                 }
+                if(graphType == GraphType.DOT) {
+                    g.drawLine(x, y, x, y);
+                }
                 if(graphType == GraphType.LINE) {
                     int xPrevious = 0;
                     if(x + startIndex > 0) {

@@ -191,6 +191,11 @@ public class GraphViewer extends JPanel{
         addPreview(preview, graphType, compressionType, panelNumber);
     }
 
+    public void addGraph(final DataSeries graphData, final GraphType graphType) {
+        addGraph(graphData, graphType, CompressionType.AVERAGE);
+
+    }
+
 
     public void addGraph(final DataSeries graph) {
         addGraph(graph, GraphType.VERTICAL_LINE, CompressionType.AVERAGE);

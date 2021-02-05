@@ -2,6 +2,7 @@ package polar;
 
 import data.CompressionType;
 import data.DataList;
+import graph.GraphType;
 import graph.GraphViewer;
 
 import java.io.File;
@@ -24,7 +25,7 @@ public class PolarPresenter {
 
         cardioData.setFrequency(ecgFrequency);
 
-        graphViewer.addGraph(cardioData);
+        graphViewer.addGraph(cardioData, GraphType.DOT);
 
         filename = "Acc.txt";
         dataFile = new File(recordDirectory, filename);
@@ -39,7 +40,7 @@ public class PolarPresenter {
         accData2.setFrequency(accFrequency);
 
         graphViewer.addGraphPanel(1,true);
-        graphViewer.addGraph(accData0);
+        graphViewer.addGraph(accData0 );
         graphViewer.addGraph(accData1);
         graphViewer.addGraph(accData2);
 
