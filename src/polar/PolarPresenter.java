@@ -44,7 +44,7 @@ public class PolarPresenter {
         accData0.setFrequency(accFrequency);
         accData1.setFrequency(accFrequency);
         accData2.setFrequency(accFrequency);
-        DataSeries accMovement = getAccMovementData(accData0, accData1, accData2);
+        DataSeries accMovement = accMovementData(accData0, accData1, accData2);
 
         graphViewer.addGraphPanel(2,false);
         graphViewer.addGraph(accMovement);
@@ -64,7 +64,7 @@ public class PolarPresenter {
      * Суммируем амплитуды движений по трем осям.
      * За ноль принят шумовой уровень.
      */
-    public static DataSeries getAccMovementData(DataList acc1, DataList acc2, DataList acc3) {
+    public static DataSeries accMovementData(DataList acc1, DataList acc2, DataList acc3) {
         Composition accMovement = new Composition();
         try {
             accMovement.add(new Rising(acc1));
